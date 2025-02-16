@@ -4,6 +4,7 @@ Welcome to the **ESP-IDF Examples** repository! This collection contains multipl
 
 ## Repository Structure
 
+```
 ESP-IDF-Examples/
 │── example1/
 │   ├── CMakeLists.txt
@@ -18,6 +19,7 @@ ESP-IDF-Examples/
 │── .vscode/  (VS Code settings)
 │── .devcontainer/  (Dev container setup)
 │── README.md  (This file)
+```
 
 ## How to Use
 Each folder inside this repository represents a fully independent ESP-IDF project. To build and flash an example:
@@ -26,48 +28,48 @@ Each folder inside this repository represents a fully independent ESP-IDF projec
    ```sh
    cd example1/
 
-Set the ESP32 target (only needed once per session):
+2. Set the ESP32 target (only needed once per session):
+   ```sh
+   idf.py set-target esp32
 
-idf.py set-target esp32
+3. Build, flash, and monitor the output:
+   ```sh
+   idf.py build flash monitor
 
-Build, flash, and monitor the output:
+## Requirements
 
-idf.py build flash monitor
+* ESP-IDF installed and configured.
 
-Requirements
+* A compatible ESP32 board.
 
-ESP-IDF installed and configured.
+* A serial connection to the board for flashing and debugging.
 
-A compatible ESP32 board.
-
-A serial connection to the board for flashing and debugging.
-
-VS Code Integration
+## VS Code Integration
 
 This repository includes .vscode/ settings for easier development. If you're using VS Code:
 
-Open this repository in VS Code.
+* Open this repository in VS Code.
 
-Use the ESP-IDF terminal for running build and flash commands.
+* Use the ESP-IDF terminal for running build and flash commands.
 
-Ensure the ESP-IDF extension is installed for best experience.
+* Ensure the ESP-IDF extension is installed for best experience.
 
-Dev Container Support
+## Dev Container Support
 
-If you're using Dev Containers, this repository includes a .devcontainer/ folder with a pre-configured environment for ESP-IDF development. Simply open the repository in a Dev Container to get started.
+If you're using Dev Containers, this repository includes a `.devcontainer/` folder with a pre-configured environment for ESP-IDF development. Simply open the repository in a Dev Container to get started.
 
-Contributing
+## Contributing
 
 Feel free to contribute additional examples! Make sure each example:
 
-Is placed in its own folder as a standalone project.
+* Is placed in its own folder as a standalone project.
 
-Includes a CMakeLists.txt file in the root and main/ folder.
+* Includes a `CMakeLists.txt` file in the root and `main/` folder.
 
-Follows ESP-IDF project structure.
+* Follows ESP-IDF project structure.
 
-License
+## License
 
-This repository is licensed under the MIT License. See LICENSE for details.
+This repository is licensed under the MIT License. See `LICENSE` for details.
 
 🚀 Happy coding with ESP32!
