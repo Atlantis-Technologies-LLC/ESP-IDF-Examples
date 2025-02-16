@@ -6,19 +6,19 @@ Welcome to the **ESP-IDF Examples** repository! This collection contains multipl
 
 ```
 ESP-IDF-Examples/
-│── example1/
+├── example1/
 │   ├── CMakeLists.txt
 │   ├── main/
 │   │   ├── CMakeLists.txt
-│   │   ├── example1.c
+│   │   └── example1.c
 │── example2/
 │   ├── CMakeLists.txt
 │   ├── main/
 │   │   ├── CMakeLists.txt
-│   │   ├── example2.c
-│── .vscode/  (VS Code settings)
-│── .devcontainer/  (Dev container setup)
-│── README.md  (This file)
+│   │   └── example2.c
+├── .vscode/  (VS Code settings)
+├── .devcontainer/  (Dev container setup)
+└── README.md  (This file)
 ```
 
 ## How to Use
