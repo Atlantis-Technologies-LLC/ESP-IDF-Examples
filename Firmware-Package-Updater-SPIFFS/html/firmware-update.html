@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firmware Updater</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Firmware Update Utility</h1>
+
+    <div class="card-container">
+        <!-- Firmware Information -->
+        <div class="card">
+            <div class="card-header">Current Version</div>
+            <div class="card-content">
+                <span id="current-version">Loading...</span>
+            </div>
+        </div>
+
+        <!-- Upload File Section -->
+        <div class="card">
+            <div class="card-header">Upload Firmware Package</div>
+            <div class="card-content">
+                <form id="upload-form">
+                    <!-- File Input -->
+                    <input type="file" id="firmware" accept=".pkg" class="file-input">
+
+                    <div class="upload-details" id="file-details"></div>
+                    
+                    <!-- Spacing for better layout -->
+                    <div class="spacer"></div> 
+        
+                    <!-- Update Button -->
+                    <div class="button-container">
+                        <button type="submit" id="update-btn">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="card" id="progress-card" style="display: none;">
+            <div class="card-header">Upload Progress</div>
+            <div class="card-content">
+                <div class="progress-container" id="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                    <div id="progress-text"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Message -->
+        <div class="card" id="status-card" style="display: none;">
+            <div class="card-header">Status</div>
+            <div class="card-content" id="status"></div>
+        </div>
+    </div>
+
+    <div class="version-container">
+        <div class="version-info">
+            Version: <span id="version-number">-</span>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="firmware-update.js"></script>
+</body>
+</html>

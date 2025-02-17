@@ -1,0 +1,295 @@
+/* ===============================
+   GLOBAL STYLES
+================================= */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f9;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+h1 {
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* ===============================
+   CONTAINERS & STRUCTURE
+================================= */
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Full width of viewport */
+    max-width: 500px; /* Limit maximum width for readability */
+    padding: 0 10px; /* Add some padding for spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.divider {
+    width: 100%;
+    max-width: 500px;
+    border-top: 1px solid #ddd;
+    margin: 20px 0; /* Equal space above and below the line */
+}
+
+/* ===============================
+   CARD STYLES
+================================= */
+
+.card {
+    background-color: #fff;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Full width of the container */
+    margin: 10px 0; /* Spacing between cards */
+    text-align: center;
+    font-size: 1.2em;
+    overflow: hidden; /* Ensures header background stays rounded */
+}
+
+.card-header {
+    background-color: #0077c8; /* Updated color */
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent text wrapping for the header */
+    border-top-left-radius: 8px; /* Round top-left corner */
+    border-top-right-radius: 8px; /* Round top-right corner */
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 1em;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.card-content button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 1.0em;
+    background-color: #0077c8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.card-content button:hover {
+    background-color: #005a9e;
+}
+
+/* ===============================
+   FORM & INPUT STYLES
+================================= */
+
+form {
+    width: 100%;
+    max-width: 500px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.input-label {
+    display: block; /* Moves label above input */
+    font-size: 1.0em; /* Match card headers */
+    color: #333;
+    text-align: left; /* Align text to the left */
+    margin-top: 15px;
+    margin-bottom: 2px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+}
+
+input[type="number"],
+input[type="file"] {
+    padding: 10px;
+    font-size: 1.0em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    flex: 1; /* Ensures input box takes up available space */
+    box-sizing: border-box;
+}
+
+/* Add spacing between file input and update button */
+.spacer {
+    height: 15px;
+}
+
+.upload-details {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* ===============================
+   BUTTON STYLES
+================================= */
+
+button {
+    padding: 10px 20px;
+    font-size: 1.0em; /* Match font size with card content */
+    background-color: #003a6d; /* Updated button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px; /* Rounded corners */
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #003a6d; /* Updated hover color */
+    opacity: 0.9; /* Slight transparency on hover for effect */
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 1.0em;
+    font-weight: bold;
+    background-color: #003a6d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button-container button:hover {
+    background-color: #003a6d;
+    opacity: 0.9;
+}
+
+#update-btn {
+    padding: 10px 20px;
+    font-size: 1.0em;
+    font-weight: bold;
+    background-color: #003a6d; /* Dark blue color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#update-btn:hover {
+    background-color: #002a50; /* Slightly darker on hover */
+    opacity: 0.9;
+}
+
+/* ===============================
+   STATUS & NOTIFICATIONS
+================================= */
+
+.status-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between the boxes */
+    width: 100%; /* Full width of the container */
+    max-width: 500px; /* Match max width with other cards */
+    padding: 0 0px; /* Padding to align with other cards */
+    box-sizing: border-box;
+    margin-top: 15px; /* Adds space above the status box */
+}
+
+.status-container .card {
+    flex: 1; /* Distribute available space evenly */
+    text-align: center;
+    padding: 10px; /* Add padding inside the status card */
+    min-height: 40px; /* Ensure a minimum height for better visibility */
+    line-height: 1.4; /* Improve readability */
+}
+
+
+/* Status Messages */
+.status-error {
+    color: red;
+    font-weight: bold;
+    padding: 8px; /* Add some spacing inside the text */
+    display: inline-block; /* Prevent text from collapsing */
+}
+
+.status-success {
+    color: green;
+    font-weight: bold;
+    padding: 8px;
+    display: inline-block;
+}
+
+.status-info {
+    color: #0077c8; /* Blue for neutral indications */
+    font-weight: bold;
+    padding: 8px;
+    display: inline-block;
+}
+
+
+/* ===============================
+   PROGRESS BAR
+================================= */
+
+.progress-container {
+    display: none;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background-color: #0077c8;
+    transition: width 0.3s;
+}
+
+/* ===============================
+   VERSION INFO
+================================= */
+
+.version-container {
+    text-align: center; /* Center both elements */
+    width: 100%;
+    max-width: 500px; /* Keep it aligned with other sections */
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.version-info {
+    font-size: 0.8em;
+    color: #666;
+    padding: 2px 0; /* Small padding for spacing */
+}
