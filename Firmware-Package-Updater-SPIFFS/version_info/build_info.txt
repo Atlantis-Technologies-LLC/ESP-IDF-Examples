@@ -1,0 +1,6 @@
+Build Info:
+Build Timestamp: 2025-02-16 23:51:18
+Git Version: 418c9e2-dirty
+ESP-IDF Version: ESP-IDF v5.5-dev-1860-g0d6099ec53
+Compiler Version: xtensa-esp-elf-gcc (crosstool-NG esp-14.2.0_20241119) 14.2.0
+OS Information: Ubuntu 24.04.1 LTS

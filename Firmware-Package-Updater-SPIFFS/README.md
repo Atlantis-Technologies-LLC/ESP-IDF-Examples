@@ -1,6 +1,6 @@
 # Firmware Package Updater (SPIFFS Edition)
 
-This example uses Python to create a firmware upate package that includes the .bin firmware file and any files within a set folder.
+This example uses Python to create a firmware upate package that includes the .bin firmware file and any files within a set SPIFFS directory.
 
 ## Features
 - **WiFi Access Point:**
