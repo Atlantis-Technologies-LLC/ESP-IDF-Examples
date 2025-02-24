@@ -80,5 +80,6 @@
       "nvs.h": "c",
       "timer_control.h": "c",
       "gpio.h": "c"
-    }
+    },
+    "idf.pythonInstallPath": "/opt/esp/python_env/idf5.5_py3.12_env/bin/python"
 }

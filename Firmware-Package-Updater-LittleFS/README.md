@@ -21,7 +21,7 @@ python create_firmware_update_package.py build/Firmware-Package-Updater-LittleFS
 from the project's root directory.
 
 The package file combines the project's .bin firmware file and any files in the html/ directory.
-Once uploaded, the web_server.c package handler writes the firmware via OTA and moves the html/ files to the LittleFS storage partition.
+Once uploaded, the web_server.c package handler writes the firmware via OTA and moves the html/ files to the LittleFS web partition.
 
 ---
 
