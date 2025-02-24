@@ -161,7 +161,7 @@ static esp_err_t package_upload_handler(httpd_req_t *req) {
 
     // **Remount LittleFS After updating firmware**
     esp_vfs_littlefs_conf_t conf = {
-        .base_path = "/web",
+        .base_path = MOUNT_POINT,
         .partition_label = "web",
         .format_if_mount_failed = true,
         .read_only = false
@@ -226,13 +226,13 @@ static esp_err_t package_upload_handler(httpd_req_t *req) {
         char filepath[300];
         
         // Ensure the file path is within bounds
-        if (strlen(file_name) > 250) {  // Leave space for "/web/"
+        if (strlen(file_name) > 250) {  // Leave space for "/web/ (MOUNT_POINT)"
             ESP_LOGE(TAG, "File path too long: %s", file_name);
             free(write_buffer);
             return ESP_FAIL;
         }
 
-        snprintf(filepath, sizeof(filepath), "/web/%s", file_name);
+        snprintf(filepath, sizeof(filepath), "%s/%s", MOUNT_POINT, file_name);
         ESP_LOGI(TAG, "Writing file: %s (Size: %d bytes)", filepath, file_size);
 
         // Open file in binary mode to prevent corruption
@@ -285,15 +285,15 @@ static esp_err_t package_upload_handler(httpd_req_t *req) {
 
 
 static esp_err_t css_get_handler(httpd_req_t *req) {
-    return file_get_handler(req, "/web/styles.css", "text/css");
+    return file_get_handler(req, MOUNT_POINT "/styles.css", "text/css");
 }
 
 static esp_err_t firmware_update_html_get_handler(httpd_req_t *req) {
-    return file_get_handler(req, "/web/firmware-update.html", "text/html");
+    return file_get_handler(req, MOUNT_POINT "/firmware-update.html", "text/html");
 }
 
 static esp_err_t firmware_update_js_get_handler(httpd_req_t *req) {
-    return file_get_handler(req, "/web/firmware-update.js", "application/javascript");
+    return file_get_handler(req, MOUNT_POINT "/firmware-update.js", "application/javascript");
 }
 
 // Handler for firmware version endpoint (returns JSON)
